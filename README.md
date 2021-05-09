@@ -1,18 +1,8 @@
-# A simple set of commands to backup :package_description restore mysql in your Laravel app.
+# Laravel MySQL Pilot
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vaugenwake/laravel_mysql_pilot.svg?style=flat-square)](https://packagist.org/packages/vaugenwake/laravel_mysql_pilot)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/vaugenwake/laravel_mysql_pilot/tests?label=tests)](https://github.com/vaugenwake/laravel_mysql_pilot/actions?query=workflow%3Atests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/vaugenwake/laravel_mysql_pilot.svg?style=flat-square)](https://packagist.org/packages/vaugenwake/laravel_mysql_pilot)
-
-[](delete) 1) manually replace `Vaugen Wakeling, vaugenwake, auhor@domain.com, vaugenwake, vaugenwake, Vendor Name, laravel-mysql-pilot, laravel_mysql_pilot, laravel_mysql_pilot, MysqlPilot, A simple set of commands to backup :package_description restore mysql in your Laravel app.` with their correct values
-[](delete) in `CHANGELOG.md, LICENSE.md, README.md, ExampleTest.php, ModelFactory.php, MysqlPilot.php, MysqlPilotCommand.php, MysqlPilotFacade.php, MysqlPilotServiceProvider.php, TestCase.php, composer.json, create_laravel_mysql_pilot_table.php.stub`
-[](delete) and delete `configure-laravel_mysql_pilot.sh`
-
-[](delete) 2) You can also run `./configure-laravel_mysql_pilot.sh` to do this automatically.
-
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-This template is inspired by the spatie [package laravel_mysql_pilot template](https://github.com/spatie/package-laravel_mysql_pilot-laravel)
 
 ## Installation
 
