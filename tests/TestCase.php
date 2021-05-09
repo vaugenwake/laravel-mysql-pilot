@@ -1,9 +1,9 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Vaugenwake\MysqlPilot\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use VendorName\Skeleton\SkeletonServiceProvider;
+use Vaugenwake\MysqlPilot\MysqlPilotServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,19 +13,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class
+            MysqlPilotServiceProvider::class
         ];
-    }
-
-    /**
-     * Setup test enviroment with migrations and factories
-     * @return void
-     */
-    public function getEnvironmentSetUp($app)
-    {
-        include_once __DIR__ . '/../database/migrations/create_skeleton_table.php.stub';
-
-        // run the up method of the migration
-        (new \CreateSkeletonTable())->up();
     }
 }

@@ -1,17 +1,17 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "vaugenwake/laravel_mysql_pilot",
+    "description": "A simple set of commands to backup :package_description restore mysql in your Laravel app.",
     "keywords": [
-        ":vendor_name",
+        "vaugenwake",
         "laravel",
-        "package_slug"
+        "laravel_mysql_pilot"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/vaugenwake/laravel_mysql_pilot",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Vaugen Wakeling",
+            "email": "vaugen.wakeling@gmail.com",
             "role": "Developer"
         }
     ],
@@ -29,13 +29,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Vaugenwake\\MysqlPilot\\": "src",
+            "Vaugenwake\\MysqlPilot\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Vaugenwake\\MysqlPilot\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,10 +50,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Vaugenwake\\MysqlPilot\\MysqlPilotServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "MysqlPilot": "Vaugenwake\\MysqlPilot\\MysqlPilotFacade"
             }
         }
     },

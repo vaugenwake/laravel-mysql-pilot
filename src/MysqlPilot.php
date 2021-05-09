@@ -1,8 +1,8 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Vaugenwake\MysqlPilot;
 
-class Skeleton
+class MysqlPilot
 {
     // This is where you build great things.
 

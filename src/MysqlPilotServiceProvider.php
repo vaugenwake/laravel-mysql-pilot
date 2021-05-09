@@ -1,10 +1,10 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Vaugenwake\MysqlPilot;
 
 use Illuminate\Support\ServiceProvider;
 
-class SkeletonServiceProvider extends ServiceProvider
+class MysqlPilotServiceProvider extends ServiceProvider
 {
 
     /**
@@ -25,11 +25,11 @@ class SkeletonServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('skeleton', function ($app) {
-            return new Skeleton();
+        $this->app->bind('laravel_mysql_pilot', function ($app) {
+            return new MysqlPilot();
         });
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'skeleton');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel_mysql_pilot');
     }
 
     /**
@@ -41,18 +41,18 @@ class SkeletonServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             // Config
             $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('skeleton.php')
+                __DIR__ . '/../config/config.php' => config_path('laravel_mysql_pilot.php')
             ], 'config');
 
             // Views
             $this->publishes([
-                __DIR__ . '/../resources/views' => resource_path('views/vendor/skeleton')
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/laravel_mysql_pilot')
             ], 'views');
 
             // Migrations
-            if (! class_exists('CreateSkeletonTable')) {
+            if (! class_exists('CreateMysqlPilotTable')) {
                 $this->publishes([
-                    __DIR__ . '/../database/migrations/create_skeleton_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_skeleton_table.php')
+                    __DIR__ . '/../database/migrations/create_laravel_mysql_pilot_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_laravel_mysql_pilot_table.php')
                 ], 'migrations');
             }
         }
@@ -64,6 +64,6 @@ class SkeletonServiceProvider extends ServiceProvider
      */
     private function loadPackageViews()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'skeleton');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'laravel_mysql_pilot');
     }
 }
