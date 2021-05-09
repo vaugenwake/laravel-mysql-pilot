@@ -1,12 +1,13 @@
 {
-    "name": "vaugenwake/laravel_mysql_pilot",
+    "name": "vaugenwake/laravel-mysql-pilot",
     "description": "A simple set of commands to backup :package_description restore mysql in your Laravel app.",
+    "type": "package",
     "keywords": [
         "vaugenwake",
         "laravel",
-        "laravel_mysql_pilot"
+        "laravel-mysql-pilot"
     ],
-    "homepage": "https://github.com/vaugenwake/laravel_mysql_pilot",
+    "homepage": "https://github.com/vaugenwake/laravel-mysql-pilot",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +19,8 @@
     "require": {
         "php": "^8.0",
         "illuminate/contracts": "^8.0",
-        "illuminate/support": "^8.0"
+        "illuminate/support": "^8.0",
+        "symfony/process": "^5.2"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
@@ -29,8 +31,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Vaugenwake\\MysqlPilot\\": "src",
-            "Vaugenwake\\MysqlPilot\\Database\\Factories\\": "database/factories"
+            "Vaugenwake\\MysqlPilot\\": "src"
         }
     },
     "autoload-dev": {
@@ -51,10 +52,7 @@
         "laravel": {
             "providers": [
                 "Vaugenwake\\MysqlPilot\\MysqlPilotServiceProvider"
-            ],
-            "aliases": {
-                "MysqlPilot": "Vaugenwake\\MysqlPilot\\MysqlPilotFacade"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
