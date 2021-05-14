@@ -9,14 +9,14 @@ class GenerateFileName
 
         $connection = config('mysqlpilot.connection');
 
-        if($connection == null) {
+        if ($connection == null) {
             $connection = config('database.default');
         }
 
         $prefix = config('mysqlpilot.prefix') != '' ? '_' . config('mysqlpilot.prefix') : '';
         $suffix = config('mysqlpilot.suffix') != '' ? '_' . config('mysqlpilot.suffix') : '';
 
-        if($timestamp == null) {
+        if ($timestamp == null) {
             $timestamp = date('Y-m-d_Hi');
         }
 
