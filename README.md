@@ -1,7 +1,7 @@
 # Laravel MySQL Pilot
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vaugenwake/laravel_mysql_pilot.svg?style=flat-square)](https://packagist.org/packages/vaugenwake/laravel_mysql_pilot)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/vaugenwake/laravel_mysql_pilot/tests?label=tests)](https://github.com/vaugenwake/laravel_mysql_pilot/actions?query=workflow%3Atests+branch%3Amain)
+[![Tests](https://github.com/vaugenwake/laravel-mysql-pilot/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/vaugenwake/laravel-mysql-pilot/actions/workflows/tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/vaugenwake/laravel_mysql_pilot.svg?style=flat-square)](https://packagist.org/packages/vaugenwake/laravel_mysql_pilot)
 
 ## Installation
