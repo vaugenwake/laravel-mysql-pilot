@@ -4,18 +4,32 @@ namespace Vaugenwake\MysqlPilot\Concerns;
 
 class GenerateFileName
 {
-    public function generate(array $config): array
+    public static function generate(string $timestamp = null): array
     {
-        $dbName = $config['include_db_name'] == true ? env('DB_DATABASE') : '';
 
-        $backupFileName = $dbName . '_' . $config['prefix'] . '_' . date('Y-m-d_Hi') . '_' . $config['suffix'] . '.sql';
+        $connection = config('mysqlpilot.connection');
+
+        if($connection == null) {
+            $connection = config('database.default');
+        }
+
+        $prefix = config('mysqlpilot.prefix') != '' ? '_' . config('mysqlpilot.prefix') : '';
+        $suffix = config('mysqlpilot.suffix') != '' ? '_' . config('mysqlpilot.suffix') : '';
+
+        if($timestamp == null) {
+            $timestamp = date('Y-m-d_Hi');
+        }
+
+        $dbName = config('mysqlpilot.include_db_name') == true ? config('database.connections.' . $connection . '.database') : '';
+
+        $backupFileName = $dbName . $prefix . '_' . $timestamp . $suffix . '.sql';
 
         $tempLocation = '/tmp/' . $backupFileName;
 
         $targetPath = '/';
 
         if (config('mysqlpilot.namespace_env') == true) {
-            $targetPath = '/' . env('APP_ENV') . '/';
+            $targetPath = '/' . config('app.env') . '/';
         }
 
         $targetFilePath = $targetPath . $backupFileName;

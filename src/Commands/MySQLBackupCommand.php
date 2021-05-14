@@ -19,7 +19,7 @@ class MySQLBackupCommand extends Command
     {
         $this->info('Starting');
 
-        list($tempLocation, $targetLocation) = (new GenerateFileName)->generate(config('mysqlpilot'));
+        list($tempLocation, $targetLocation) = GenerateFileName::generate();
 
         $this->info('Creating backup: <fg=yellow>' . $targetLocation . '</>');
 

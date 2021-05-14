@@ -13,6 +13,12 @@ return [
     'disk' => env('APP_ENV') === 'local' ? 'local' : 's3',
 
     /**
+     * Set the connection name is the 'default' connection is
+     * not the intended backup source.
+     */
+    'connection' => null,
+
+    /**
      * How long should we keep backups for before we delete them,
      * 30 days by default
      */
@@ -28,13 +34,13 @@ return [
      * Add a prefix to the backup filename
      * i.e. [prefix]_2020_01_01_0000.sql
      */
-    'prefix' => 'prefix',
+    'prefix' => '',
 
     /**
      * Add a prefix to the backup filename
      * i.e. 2020_01_01_0000_[suffix].sql
      */
-    'suffix' => 'suffix',
+    'suffix' => '',
 
     /**
      * Include the database name in the backup file name

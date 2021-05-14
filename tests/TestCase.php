@@ -16,4 +16,15 @@ class TestCase extends Orchestra
             MysqlPilotServiceProvider::class
         ];
     }
+
+    protected function defineEnvironment($app)
+    {
+        $app['config']->set('app.env', 'testing');
+        $app['config']->set('database.default', 'testbench');
+        $app['config']->set('database.connections.testbench', [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => '',
+        ]);
+    }
 }
